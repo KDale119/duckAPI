@@ -1,5 +1,9 @@
-let duck = fetch('https://random-d.uk/api')
+function testing() {
+fetch('https://dog.ceo/api/breeds/image/random', {method: "GET"})
 .then(response => response.json())
-.then(result =>
-    console.log(result)
-)
+.then(result => 
+    {
+        let pic = document.getElementById('pic')
+        pic.setAttribute('src', result.message);
+    })
+}
